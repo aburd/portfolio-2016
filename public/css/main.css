@@ -19,10 +19,9 @@ nav #main-nav {
 }
 
 nav #main-nav li {
-  margin: 2%;
   font-size: 20em;
   display: inline-block;
-  width: 20%;
+  width: 19.5%;
   list-style: none;
   border-bottom: 0px solid #e8ffe8;
   -webkit-transition: border-bottom 1s;
@@ -34,7 +33,7 @@ nav #main-nav li:hover {
 }
 
 #attention-grabber {
-  border-bottom: 1px solid #FF8449;
+  border-bottom: 1px solid #1E7F77;
 }
 
 #attention-grabber span {
@@ -44,4 +43,6 @@ nav #main-nav li:hover {
 #attention-grabber h1 {
   font-size: 1.5em;
   margin: 0;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
