@@ -1,0 +1,47 @@
+html, body {
+  font-family: "Helvetica Neue", "Century Gothic", sans-serif;
+  color: #1E7F77;
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
+  background: linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
+}
+
+a {
+  color: #B2440F;
+}
+
+nav #main-nav {
+  padding: 0;
+  text-align: center;
+}
+
+nav #main-nav li {
+  margin: 2%;
+  font-size: 20em;
+  display: inline-block;
+  width: 20%;
+  list-style: none;
+  border-bottom: 0px solid #e8ffe8;
+  -webkit-transition: border-bottom 1s;
+  transition: border-bottom 1s;
+}
+
+nav #main-nav li:hover {
+  border-bottom: 1px solid #FF8449;
+}
+
+#attention-grabber {
+  border-bottom: 1px solid #FF8449;
+}
+
+#attention-grabber span {
+  font-size: 5em;
+}
+
+#attention-grabber h1 {
+  font-size: 1.5em;
+  margin: 0;
+}

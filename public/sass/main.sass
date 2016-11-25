@@ -1,0 +1,63 @@
+//
+// Main Font Variable Declarations
+//
+$main-font: "Helvetica Neue", "Century Gothic", sans-serif
+$font-primary: #1E7F77;
+$font-secondary: #B2440F
+$font-tertiary: #FF8449;
+$background: #e8ffe8
+
+
+//
+// @mixins & functions
+//
+=border-bottom($color)
+	border-bottom: 1px solid $color;
+
+=transition-1sec($property)
+	-webkit-transition: $property 1s
+	transition: $property 1s
+
+
+//
+// Styles *
+//
+html, body
+	font-family: $main-font;
+	color: $font-primary
+	height: 100%;
+
+body
+	background: linear-gradient($background, rgba($background, 0.2));
+	
+
+a
+	color: $font-secondary
+
+nav
+
+	#main-nav
+		padding: 0;
+		text-align: center;
+
+		li
+			margin: 2%;
+			font-size: 20em;
+			display: inline-block;
+			width: 20%;
+			list-style: none
+			border-bottom: 0px solid $background
+			+transition-1sec(border-bottom)
+
+			&:hover
+				+border-bottom($font-tertiary)
+
+#attention-grabber
+	border-bottom: 1px solid $font-tertiary;
+
+	span
+		font-size: 5em
+
+	h1
+		font-size: 1.5em
+		margin: 0;

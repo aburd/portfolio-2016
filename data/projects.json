@@ -1,0 +1,25 @@
+[{
+    "name": "servcorp-coworking",
+    "images": ["Servcorp Coworking(1).png", "Servcorp Coworking(2).png", "Servcorp Coworking(3).png", "Servcorp Coworking(4).png", "Servcorp Coworking.png"],
+    "description":"",
+    "tags":[],
+    "date": ""
+}, {
+    "name": "servcorp-rental",
+    "images": [".DS_Store", "Servcorp Rental Offices(1).png", "Servcorp Rental Offices(2).png", "Servcorp Rental Offices(3).png", "Servcorp Rental Offices(4).png", "Servcorp Rental Offices.png"],
+    "description":"",
+    "tags":[],
+    "date": ""
+}, {
+    "name": "servcorp-stay-connected",
+    "images": ["Servcorp   Stay Connected (1).png", "Servcorp   Stay Connected .png"],
+    "description":"",
+    "tags":[],
+    "date": ""
+}, {
+    "name": "servcorp-virtual-office",
+    "images": ["SERVCORP Virtual Office(1).png", "SERVCORP Virtual Office.png", "サーブコープバーチャルオフィス(1).png", "サーブコープバーチャルオフィス(2).png", "サーブコープバーチャルオフィス.png"],
+    "description":"",
+    "tags":[],
+    "date": ""
+}]
