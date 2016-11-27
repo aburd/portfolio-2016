@@ -1,3 +1,15 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
+ 
+<div class="container err">
+	<div class="col-xs-12">
+		<h1>{{message}}</h1>
+		<div id="attention-grabber">	
+	    <span>{{error.status}} error</span>
+	    <h1>Oh dear god, why!?</h1>
+	    <div style="text-align: center">
+	      <img src="/images/404.gif"><br>
+	      <a href="/">Back to the madness...</a>
+	    </div>
+	  </div>
+	</div>
+</div>
 <pre>{{error.stack}}</pre>

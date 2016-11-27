@@ -1,12 +1,20 @@
 html, body {
-  font-family: "Helvetica Neue", "Century Gothic", sans-serif;
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-weight: 300;
   color: #1E7F77;
-  height: 100%;
+  font-size: 1em;
 }
 
 body {
   background: -webkit-linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
   background: linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1400px;
+  }
 }
 
 a {
@@ -18,18 +26,35 @@ nav #main-nav {
   text-align: center;
 }
 
+nav #main-nav.subpage li {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
 nav #main-nav li {
   font-size: 20em;
   display: inline-block;
-  width: 19.5%;
+  margin: 20px;
   list-style: none;
-  border-bottom: 0px solid #e8ffe8;
+  border-bottom: 1px solid #e8ffe8;
+  line-height: 1em;
   -webkit-transition: border-bottom 1s;
   transition: border-bottom 1s;
 }
 
 nav #main-nav li:hover {
   border-bottom: 1px solid #FF8449;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+}
+
+h2.title {
+  font-size: 3em;
+  text-align: center;
 }
 
 #attention-grabber {
@@ -45,4 +70,55 @@ nav #main-nav li:hover {
   margin: 0;
   font-weight: 200;
   letter-spacing: 1px;
+}
+
+.work {
+  margin: 5em 0;
+}
+
+.work h3 {
+  font-size: 2em;
+  color: #FF8449;
+}
+
+.work .detail {
+  margin: 10px 0;
+}
+
+.work .tags {
+  padding: 0;
+  color: #eee;
+}
+
+.work .tags li {
+  list-style: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 5px 10px;
+  background-color: #B2440F;
+  border-radius: 5px;
+}
+
+.screenshots {
+  text-align: center;
+}
+
+.screenshot {
+  margin-bottom: 10px;
+  max-width: 100%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.screenshot img {
+  max-width: 100%;
+  max-height: 700px;
+}
+
+.err {
+  font-family: "Inconsolata", "Lucida Console", monospace;
+}
+
+.err #attention-grabber {
+  border-bottom: none;
 }

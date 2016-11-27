@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var hbs = require('hbs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -55,6 +56,16 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+// Handlebars helpers
+hbs.registerHelper('breakup', function(options){
+  var pArr = options.fn(this).split(/\/n\/n/g)
+  return new hbs.SafeString( pArr.map( p => "<p>"+p+"</p>").join("") )
+})
+
+hbs.registerHelper('formatDate', function(options) {
+  return new Date(options.fn(this)).toDateString()
+})
 
 
 module.exports = app;
