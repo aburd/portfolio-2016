@@ -9,7 +9,8 @@ mongoose.Promise = require('bluebird')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { 
-  	title: 'aburd\'s Portfolio | aburdのポートフォリオ'
+  	title: 'aburd\'s Portfolio | aburdのポートフォリオ',
+  	layout: 'home-layout'
   });
 });
 
@@ -37,7 +38,7 @@ router.get('/works', function(req, res, next) {
 						title: 'aburd\'s Works | aburdの業歴',
 						pageTitle: 'i powerbomb html and elbow-drop js',
 						works: filteredWorks,
-						layout: 'layout-sub-page'
+						layout: 'layout'
 					})
 					db.close()
 				})
@@ -61,7 +62,7 @@ router.get('/works/:name', function(req, res, next) {
 							title: 'a work by aburd | aburdの業歴',
 							pageTitle: 'i powerbomb html and elbow-drop js',
 							work: work,
-							layout: 'layout-sub-page'
+							layout: 'layout'
 						})
 					} else {
 						res.status(404);

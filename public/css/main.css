@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 html, body {
   font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -70,6 +74,22 @@ h2.title {
   margin: 0;
   font-weight: 200;
   letter-spacing: 1px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  background: #222;
+  color: #eee;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.container {
+  min-height: 100%;
 }
 
 .work {

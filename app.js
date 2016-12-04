@@ -1,5 +1,6 @@
-var express = require('express');
 var path = require('path');
+var fs = require('fs');
+var express = require('express');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -66,6 +67,12 @@ hbs.registerHelper('breakup', function(options){
 hbs.registerHelper('formatDate', function(options) {
   return new Date(options.fn(this)).toDateString()
 })
+
+// Code for Handlebar partials
+var partialsFolder = path.join(__dirname, 'views', 'partials')
+hbs.registerPartials(partialsFolder)
+hbs.registerPartial('navigation', fs.readFileSync(partialsFolder + '/navigation.hbs'))
+hbs.registerPartial('footer', fs.readFileSync(partialsFolder + '/footer.hbs'))
 
 
 module.exports = app;

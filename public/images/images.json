@@ -1,37 +1,10 @@
 [{
-    "name": "Servcorp Coworking",
-    "url": "servcorp-coworking",
-    "description": "As the rental office market was moving more towards shared space, Servcorp needed a page that would promote their new line of coworking spaces. The company is associated with being a five-star brand, but for this project they wanted to appeal to a younger audience, start up cultures and such. In addition, it was important to emphasize to businesses that they would be supported by the community within Servcorp's large range of clients./n/nI think my favorite part of this project was being able to get a page with a modern amount of interactivity and visual features to be viewable down to IE8 to ensure everyone would be able to enjoy this website.",
+    "name": "Misty Motel",
+    "url": "misty-motel",
+    "description": "A little independent site made with friends featuring poetry, art and essays. A friend expressed to me that they had trouble turning this into a web project and that most of the design only existed as PDFs so I took him under my wing and we made it happen./n/nProbably my favorite part about this was learning how infinite scroll worked and implementing it.",
     "agency": "Servcorp",
     "cover": "",
-    "date": "2016-11-26T13:12:04.379Z",
-    "screenshots": ["servcorp-coworking/iphone6-contact-us.png", "servcorp-coworking/iphone6-locations.png", "servcorp-coworking/macbook-contact.png", "servcorp-coworking/macbook-locations.png", "servcorp-coworking/macbook-top.png"],
-    "tags": ["UI", "landing page", "Marketing", "Compatibility", "Bugs/Troubleshooting"]
-}, {
-    "name": "Servcorp Rental Offices",
-    "url": "servcorp-rental",
-    "description": "Servcorp does business in over 25 countries in over 150 locations, so they often need to tailor lots of marketing material to different countries. This particular project was a complete overhaul of Servcorp's local facing page for a Japanese audience. The page was only in Japanese and it was a blast to get Japanese type-faces looking just right./n/nJapan is Servcorp's second largest market, so they had around 24 locations in Japan when I made this page. The company has no database, so I created one and used that to displace all the locations, rather than reinventing the wheel every time a new location was added.",
-    "agency": "Servcorp",
-    "cover": "",
-    "date": "2016-11-26T13:12:04.380Z",
-    "screenshots": ["servcorp-rental/iphone-around.png", "servcorp-rental/iphone-locations.png", "servcorp-rental/macbook-locations.png", "servcorp-rental/macbook-maps.png", "servcorp-rental/macbook-top.png"],
-    "tags": ["UI", "landing page", "Japanese", "Steamlining", "Renewal"]
-}, {
-    "name": "Servcorp Stay Connected Promotion",
-    "url": "servcorp-stay-connected",
-    "description": "This page was made for a promotion the company was doing to increase the amount of entries in our real-estate agent database. Showing off all the items that were available to the winners of the raffle in an attractive way was probably the most fun part about this project. Since there were no photos already, I had to photograph it myself. Seeing the media all come together was exciting.",
-    "agency": "Servcorp",
-    "cover": "",
-    "date": "2016-11-26T13:12:04.381Z",
-    "screenshots": ["servcorp-stay-connected/iphone-top.png", "servcorp-stay-connected/macbook-top.png"],
-    "tags": ["UI", "landing page", "Japanese", "Photography"]
-}, {
-    "name": "Servcorp Virtual Offices",
-    "url": "servcorp-virtual-office",
-    "description": "This was arguably the most important page in the company given it's budget. It is the page which generates the most leads for the company's virtual office product. The page's HTML was originally edited directly by hand, which led to mistakes and large turn around times whenever work on the page was necessary, which was monthly given that the company has a different promotion every month on different locations./n/nIn order to remedy this confusion, I first separated the data and the templates. I then converted the page to generated the locations dynamically.\n\nAs a result, updates were able to be made about ten times faster, with less errors saving the company time and money.",
-    "agency": "Servcorp",
-    "cover": "",
-    "date": "2016-11-26T13:12:04.382Z",
-    "screenshots": ["servcorp-virtual-office/iphone-locations.png", "servcorp-virtual-office/macbook-locations.png"],
-    "tags": ["UI", "landing page", "PHP", "Japanese", "Database"]
+    "date": "",
+    "screenshots": ["misty-motel/issueone.png"],
+    "tags": ["Independent", "Front-end", "Art", "Fun"]
 }]

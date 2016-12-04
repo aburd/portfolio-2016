@@ -6,7 +6,8 @@ $monospace-font: 'Inconsolata', 'Lucida Console', monospace
 $font-primary: #1E7F77
 $font-secondary: #B2440F
 $font-tertiary: #FF8449
-$white: #eee
+$font-black: #222
+$font-white: #eee
 $background: #e8ffe8
 
 // typography
@@ -38,16 +39,17 @@ $xs: 480px
 //
 // Styles *
 //
+html
+	height: 100%;
 html, body
 	font-family: $main-font;
 	font-weight: 300;
 	color: $font-primary
 	font-size: 1em
-
 body
 	background: linear-gradient($background, rgba($background, 0.2));
-	height: 100%;
-
+	height: 100%
+	
 @media screen and (min-width: 1200px)
 	.container
 		width: 1400px;
@@ -56,7 +58,6 @@ a
 	color: $font-secondary
 
 nav
-
 	#main-nav
 		padding: 0;
 		text-align: center;
@@ -99,6 +100,19 @@ h2
 		font-weight: 200;
 		letter-spacing: 1px;
 
+footer
+	position: relative
+	width: 100%;
+	bottom: 0
+	background: $font-black
+	color: $font-white
+	ul
+		list-style: none
+
+
+.container
+	min-height: 100%
+
 // **********
 // WORKS PAGE
 // **********
@@ -116,7 +130,7 @@ h2
 
 	.tags
 		padding: 0;
-		color: $white
+		color: $font-white
 
 		li
 			list-style: none
