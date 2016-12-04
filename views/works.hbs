@@ -1,23 +1,22 @@
-<h2 class="title">{{pageTitle}}</h2>
-{{#works}}
-<div class="row work">
-	<div class="col-xs-12" style="padding: 0">
-		<div class="details">
-			<div class="detail screenshots">
-				<div class="screenshot">
-					<img src="/images/{{cover}}" alt="{{name}}">
+<div class="row works">
+	<h2 class="title">{{pageTitle}}</h2>
+	{{#works}}
+	<a href="/works/{{url}}">
+		<div class="col-md-4" style="padding: 0">
+			<div class="work-item">
+				<div class="work-item-inner">
+					<div class="screenshot">
+						<img src="/images/{{cover}}" alt="{{name}}">
+					</div>
+					<div class="info-window">
+						<div class="info-window-inner">
+							<p>{{name}}</p>
+							<span>{{agency}}</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="detail">
-				<strong>Name:</strong> {{name}}
-				<a href="./{{url}}">Click</a>
-			</div>
-			<div class="detail">
-				<strong>Agency:</strong> {{agency}}
-			</div>
 		</div>
-	</div>
-	
-		 
+	</a>
+	{{/works}}
 </div>
-{{/works}}

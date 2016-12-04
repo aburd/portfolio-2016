@@ -34,50 +34,84 @@ $xs: 480px
 	-webkit-transition: $property 1s
 	transition: $property 1s
 
+=transition-quick($property)
+	-webkit-transition: $property 0.3s
+	transition: $property 0.3s
+
 
 
 //
 // Styles *
 //
-html
+html, body 
 	height: 100%;
-html, body
+	overflow: auto;
+body
 	font-family: $main-font;
 	font-weight: 300;
 	color: $font-primary
-	font-size: 1em
-body
 	background: linear-gradient($background, rgba($background, 0.2));
-	height: 100%
-	
+
 @media screen and (min-width: 1200px)
 	.container
-		width: 1400px;
+		width: 1200px;
+		pt
 
 a
 	color: $font-secondary
+	+transition-quick(color)
 
+	&:hover
+		color: $font-tertiary
+
+#top-bar
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $font-primary
+	color: $font-white
+	z-index: 1
+
+	.col-xs-6
+		img
+			width: 100px;
+
+		&:first-child
+			a
+				margin-left: 15px
+				margin-top: 5px;
+				display: inline-block;
+		&:last-child
+			text-align: right;
 nav
-	#main-nav
-		padding: 0;
-		text-align: center;
+	padding: 0;
+	display: inline-block;
 
-		&.subpage
+	#main-nav
+		padding: 0
+		margin: 0
+
+		&.home
 			li
-				font-size: 1.5em
-				margin: 10px
+				font-size: $cover-size
+				margin: 20px
 
 		li
-			font-size: $cover-size
+			font-size: 1.5em
 			display: inline-block;
-			margin: 20px;
+			margin: 10px;
 			list-style: none
-			border-bottom: 1px solid $background
 			line-height: 1em
 			+transition-1sec(border-bottom)
+			a
+				color: $font-white
+				text-decoration: none
+				font-weight: 200
 
-			&:hover
-				+border-bottom($font-tertiary)
+				&:hover
+					color: $font-secondary
+					text-decoration: none
 
 @media #{$media} and ($max: $xs)
 	nav
@@ -101,56 +135,115 @@ h2
 		letter-spacing: 1px;
 
 footer
+	padding: 30px;
 	position: relative
 	width: 100%;
 	bottom: 0
-	background: $font-black
+	background: $font-primary
 	color: $font-white
+	a
+		color: $background
 	ul
 		list-style: none
+		padding: 0;
+		margin-bottom: 0;
+		li
+			display: inline-block;
+			margin-right: 10px;
 
 
 .container
 	min-height: 100%
+	&.top-container
+		padding-top: 44px
+
+
 
 // **********
 // WORKS PAGE
 // **********
-.work
+.works
 	margin: 5em 0
 
 	h3
 		font-size: $size-heading
 		color: $font-tertiary
 
-	.details
+	.info-window
+		margin-left: auto
+		margin-right: auto
+		height: 100%
+		position: absolute
+		top: 0
+		width: 100%
+		background-color: $font-white
+		font-size: 1.25em
+		opacity: 0
+		+transition-quick(opacity)
+		&:hover
+			opacity: 0.9
 
-	.detail
-		margin: 10px 0
+	.info-window-inner
+		text-align: center;
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
 
-	.tags
-		padding: 0;
-		color: $font-white
+		p
+			font-weight: 400;
+			text-decoration: underline;
+			line-height: 14px
+			margin: 0;
+			color: $font-primary
+		span
+			color: rgba($font-primary, 0.8)
+			font-size: 0.8em
 
-		li
-			list-style: none
-			display: inline-block;
-			margin: 2px 5px;
-			padding: 5px 10px;
-			background-color: $font-secondary
-			border-radius: 5px
+.work-item
+	padding: 15px;
+	.work-item-inner
+		text-align: center
+		background: rgba($font-black, 0.95)
+		padding: 25px 0
+		box-shadow: -2px 2px 10px rgba(0,0,0,0.6);
+		position: relative
+		.screenshot
+			img
+				max-height: 200px
 
 .screenshots
-	text-align: center
-
+	text-align: center;
 .screenshot
 	margin-bottom: 10px
 	max-width: 100%
 	display: inline-block
 	margin: 10px;
+
 	img
 		max-width: 100%;
 		max-height: 700px
+
+.work
+	.details
+
+	.detail
+		margin: 10px 0
+
+	li
+		list-style: none
+		display: inline-block;
+		margin: 2px 5px;
+		padding: 5px 10px;
+		background-color: $font-secondary
+		border-radius: 5px
+
+	.tags
+		padding: 0;
+		color: $font-white
+
+
 
 // 404s and stuff
 .err

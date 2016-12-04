@@ -1,53 +1,90 @@
-html {
-  height: 100%;
-}
-
 html, body {
-  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
-  font-weight: 300;
-  color: #1E7F77;
-  font-size: 1em;
+  height: 100%;
+  overflow: auto;
 }
 
 body {
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #1E7F77;
   background: -webkit-linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
   background: linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
-  height: 100%;
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 1200px;
   }
 }
 
 a {
   color: #B2440F;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #FF8449;
+}
+
+#top-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1E7F77;
+  color: #eee;
+  z-index: 1;
+}
+
+#top-bar .col-xs-6 img {
+  width: 100px;
+}
+
+#top-bar .col-xs-6:first-child a {
+  margin-left: 15px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+#top-bar .col-xs-6:last-child {
+  text-align: right;
+}
+
+nav {
+  padding: 0;
+  display: inline-block;
 }
 
 nav #main-nav {
   padding: 0;
-  text-align: center;
+  margin: 0;
 }
 
-nav #main-nav.subpage li {
-  font-size: 1.5em;
-  margin: 10px;
+nav #main-nav.home li {
+  font-size: 20em;
+  margin: 20px;
 }
 
 nav #main-nav li {
-  font-size: 20em;
+  font-size: 1.5em;
   display: inline-block;
-  margin: 20px;
+  margin: 10px;
   list-style: none;
-  border-bottom: 1px solid #e8ffe8;
   line-height: 1em;
   -webkit-transition: border-bottom 1s;
   transition: border-bottom 1s;
 }
 
-nav #main-nav li:hover {
-  border-bottom: 1px solid #FF8449;
+nav #main-nav li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+nav #main-nav li a:hover {
+  color: #B2440F;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -77,46 +114,99 @@ h2.title {
 }
 
 footer {
+  padding: 30px;
   position: relative;
   width: 100%;
   bottom: 0;
-  background: #222;
+  background: #1E7F77;
   color: #eee;
+}
+
+footer a {
+  color: #e8ffe8;
 }
 
 footer ul {
   list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .container {
   min-height: 100%;
 }
 
-.work {
+.container.top-container {
+  padding-top: 44px;
+}
+
+.works {
   margin: 5em 0;
 }
 
-.work h3 {
+.works h3 {
   font-size: 2em;
   color: #FF8449;
 }
 
-.work .detail {
-  margin: 10px 0;
+.works .info-window {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #eee;
+  font-size: 1.25em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
-.work .tags {
-  padding: 0;
-  color: #eee;
+.works .info-window:hover {
+  opacity: 0.9;
 }
 
-.work .tags li {
-  list-style: none;
-  display: inline-block;
-  margin: 2px 5px;
-  padding: 5px 10px;
-  background-color: #B2440F;
-  border-radius: 5px;
+.works .info-window-inner {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.works .info-window-inner p {
+  font-weight: 400;
+  text-decoration: underline;
+  line-height: 14px;
+  margin: 0;
+  color: #1E7F77;
+}
+
+.works .info-window-inner span {
+  color: rgba(30, 127, 119, 0.8);
+  font-size: 0.8em;
+}
+
+.work-item {
+  padding: 15px;
+}
+
+.work-item .work-item-inner {
+  text-align: center;
+  background: rgba(34, 34, 34, 0.95);
+  padding: 25px 0;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.work-item .work-item-inner .screenshot img {
+  max-height: 200px;
 }
 
 .screenshots {
@@ -133,6 +223,24 @@ footer ul {
 .screenshot img {
   max-width: 100%;
   max-height: 700px;
+}
+
+.work .detail {
+  margin: 10px 0;
+}
+
+.work li {
+  list-style: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 5px 10px;
+  background-color: #B2440F;
+  border-radius: 5px;
+}
+
+.work .tags {
+  padding: 0;
+  color: #eee;
 }
 
 .err {
