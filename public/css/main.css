@@ -6,6 +6,7 @@ html, body {
 body {
   font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 300;
+  font-size: 18px;
   color: #1E7F77;
   background: -webkit-linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
   background: linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
@@ -98,6 +99,10 @@ h2.title {
   text-align: center;
 }
 
+section {
+  margin: 5em 0;
+}
+
 #attention-grabber {
   border-bottom: 1px solid #1E7F77;
 }
@@ -145,8 +150,50 @@ footer ul li {
   padding-top: 44px;
 }
 
-.works {
-  margin: 5em 0;
+.about .images img {
+  width: 100%;
+}
+
+.about .image {
+  position: relative;
+}
+
+.about .image .info-window {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #eee;
+  font-size: 1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.about .image .info-window:hover {
+  opacity: 0.9;
+}
+
+.about .image .info-window-inner {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.about .image p {
+  font-weight: 200;
+  margin: 0 1em;
+  letter-spacing: 2px;
+  color: #1E7F77;
+}
+
+.about .image span {
+  color: rgba(30, 127, 119, 0.8);
+  font-size: 0.8em;
 }
 
 .works h3 {

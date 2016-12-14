@@ -14,6 +14,15 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* GET about page. */
+router.get('/about', function(req, res, next) {
+  res.render('about', { 
+  	title: 'aburd\'s Portfolio | aburdのポートフォリオ',
+  	layout: 'layout',
+  	currentlyLearning: 'React.js'
+  });
+});
+
 /*
 / GET all works
 */

@@ -1,0 +1,71 @@
+<section class="about">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Who am I?</h1>
+		</div>
+		<div class="col-xs-12">
+			<p>I'm just a guy who has always liked messing around with computers and making stuff. </p> 
+
+			<p>I got my first taste of the internet listening to .wav files of cartoon characters in 1994 or so. Back then we were hooking up to the internet through an autodialer they made at MCI. All I knew is that's how you listened to Daffy Duck.</p>
+
+			<p>Nowadays, I make my living using <strong>PHP</strong>, <strong>HTML</strong>, <strong>CSS3</strong>, and <strong>JS</strong> (ES5, ES6). I also oversee new web projects for the company I work at. I get my kicks using Node.js and learning more about the backend side of things. My favorite tools are <strong></strong>, <strong>Express</strong>, <strong>Handlebars</strong>, <strong>Gulp</strong> and <strong>jQuery</strong>.</p>
+
+			<p>I also have knolwedge of <strong>Mysql</strong> and the <strong>Codeigniter</strong> PHP framework.</p>
+
+			<p>
+				Currently learning: <strong>{{currentlyLearning}}</strong>
+			</p>
+		</div>
+	</div>
+	<div class="row timeline">
+		<div class="col-xs-12">
+			<h2>Timeline</h2>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-xs-12">
+			<h3>Latest Pictures from <a href="http://imgur.com/user/aburdick">imgur</a></h3>
+		</div>
+		<!-- Pictures go here -->
+	</div>
+</section>
+
+<script>
+	$.ajax({
+	  url: 'https://api.imgur.com/3/album/fR7JM/images',
+	  type: 'GET',
+	  headers: {
+	    Authorization: 'Client-ID 1d05543ed6509d9',
+	    Accept: 'application/json'
+	  },
+	  data: {
+	    image: localStorage.dataBase64,
+	    type: 'base64'
+	  },
+	  success: function(result) {
+	    var pictures = result.data.slice(0, 20);
+	    for(var i = 0; i < pictures.length; i++) {
+	    	var pictureStr = `
+	    		<div class="col-md-4">
+	    			<div class="image">
+		    			<img src="${pictures[i].link}" alt="">
+							<div class="info-window">
+								<div class="info-window-inner">
+									<p>${pictures[i].title}</p>
+								</div>
+							</div>
+	    			</div>
+					</div>
+	    	`
+	    	$('.row.images').append(pictureStr)
+	    }
+	  }
+	});
+</script>
+<!-- 
+client id
+1d05543ed6509d9
+
+client secret
+f420fbc80bc0ccd4dd42aa75be7103957353c08a
+ -->
