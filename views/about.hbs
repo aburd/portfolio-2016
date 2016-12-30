@@ -4,24 +4,74 @@
 			<h1>Who am I?</h1>
 		</div>
 		<div class="col-xs-12">
-			<p>I'm just a guy who has always liked messing around with computers and making stuff. </p> 
+			<div id="general">
+				<h3>Generally Speaking</h3>
+				<p>I like computers way too much. My girlfriend doesn't like how much I like computers. But I do!</p> 
 
-			<p>I got my first taste of the internet listening to .wav files of cartoon characters in 1994 or so. Back then we were hooking up to the internet through an autodialer they made at MCI. All I knew is that's how you listened to Daffy Duck.</p>
+				<p>I got my first taste of the internet listening to .wav files of cartoon characters in 1994 or so.</p>
 
-			<p>Nowadays, I make my living using <strong>PHP</strong>, <strong>HTML</strong>, <strong>CSS3</strong>, and <strong>JS</strong> (ES5, ES6). I also oversee new web projects for the company I work at. I get my kicks using Node.js and learning more about the backend side of things. My favorite tools are <strong></strong>, <strong>Express</strong>, <strong>Handlebars</strong>, <strong>Gulp</strong> and <strong>jQuery</strong>.</p>
+				<p>In highschool, I got into game programming, making websites for bands in my area, and blogging on the internet with my brother.</p>
 
-			<p>I also have knolwedge of <strong>Mysql</strong> and the <strong>Codeigniter</strong> PHP framework.</p>
+				<p>After college, I moved to Japan where I rekindled my love of programming. I currently make websites for <strong>Servcorp Japan</strong> and I make websites and webapps in my spare time.</p>
+			</div>
+
+			<div id="technical">
+				<h3>For the Techno-weenies</h3>
+				<p>I would consider myself to be more of a frontend person, but we all know that everyone does a bit of both, right? I use a mix of tools to accomplish the tasks set before me, but on the frontend, my toolbelt usually consists of:</p>
+				<ul>
+					<li>HTML</li>
+					<li>CSS and Sass</li>
+					<li>Javascript</li>
+					<li>Gulp</li>
+					<li>Photoshop</li>
+					<li>React with Redux</li>
+					<li>Libs like: jQuery, bootstrap, Handlebars, Modernizr</li>
+				</ul>
+
+				<p>On the backend, in no particular order, I like to use:</p>
+				<ul>
+					<li>PHP</li>
+					<li>Node.js</li>
+					<li>Codeigniter</li>
+					<li>Express</li>
+					<li>Apache and Nginx</li>
+					<li>AWS</li>
+					<li>Docker</li>
+				</ul>
+			</div>
 
 			<p>
 				Currently learning: <strong>{{currentlyLearning}}</strong>
 			</p>
 		</div>
 	</div>
-	<div class="row timeline">
+
+	<div class="row timeline-section">
 		<div class="col-xs-12">
-			<h2>Timeline</h2>
+			
+			<h3>Timeline</h3>
+			<ul class="timeline">
+				{{#timelineEvents}}
+				<li>
+					<div class="direction-{{#alternateSides @index}}{{/alternateSides}}">
+						<div class="flag-wrapper">
+							<span class="flag">{{name}}</span>
+							<span class="time-wrapper">
+								<span class="time">{{date}}</span>
+							</span>
+						</div>
+						<div class="desc">
+							{{{description}}} <br>
+							<strong>{{place}}</strong>
+						</div>
+					</div>
+				</li>
+				{{/timelineEvents}}
+			</ul>
+
 		</div>
 	</div>
+	
 	<div class="row images">
 		<div class="col-xs-12">
 			<h3>Latest Pictures from <a href="http://imgur.com/user/aburdick">imgur</a></h3>
@@ -32,7 +82,7 @@
 
 <script>
 	$.ajax({
-	  url: 'https://api.imgur.com/3/album/fR7JM/images',
+	  url: 'https://api.imgur.com/3/album/a8xL1/images',
 	  type: 'GET',
 	  headers: {
 	    Authorization: 'Client-ID 1d05543ed6509d9',

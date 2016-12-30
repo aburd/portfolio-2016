@@ -1,0 +1,42 @@
+// **********
+// ABOUT PAGE
+// **********
+.about
+	
+	.images
+		img
+			width: 100%;
+
+	.image
+		position: relative
+
+		.info-window
+			margin-left: auto
+			margin-right: auto
+			height: 100%
+			position: absolute
+			top: 0
+			width: 100%
+			background-color: $font-white
+			font-size: 1em
+			opacity: 0
+			+transition-quick(opacity)
+			&:hover
+				opacity: 0.9
+
+		.info-window-inner
+			text-align: center;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+
+		p
+			font-weight: 200;
+			margin: 0 1em
+			letter-spacing: 2px
+			color: $font-primary
+		span
+			color: rgba($font-primary, 0.8)
+			font-size: 0.8em

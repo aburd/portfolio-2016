@@ -1,7 +1,11 @@
 //
 // Main Font Variable Declarations
 //
-$main-font: 'Helvetica Neue', 'Lucida Grande', sans-serif
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Press+Start+2P');
+
+//$main-font: 'Helvetica Neue', 'Lucida Grande', sans-serif
+$main-font: 'Open Sans', 'Lucida Grande', sans-serif
+$title-font: 'Press Start 2P', serif
 $monospace-font: 'Inconsolata', 'Lucida Console', monospace
 $font-primary: #1E7F77
 $font-secondary: #B2440F
@@ -48,7 +52,7 @@ html, body
 	overflow: auto;
 body
 	font-family: $main-font;
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 18px
 	color: $font-primary
 	background: linear-gradient($background, rgba($background, 0.2));
@@ -65,14 +69,33 @@ a
 	&:hover
 		color: $font-tertiary
 
+h1
+	font-family: 'Press Start 2P'
+	text-transform: uppercase
+
+h2, h3
+	font-weight: 600
+	text-decoration: underline
+
+h2.title
+		font-size: $size-title
+		text-align: center
+
+td, th
+	padding: 0 10px 0 0
+
+section
+	margin: 5em 0
+
 #top-bar
+	margin: 0
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	background-color: $font-primary
 	color: $font-white
-	z-index: 1
+	z-index: 100
 
 	.col-xs-6
 		img
@@ -118,14 +141,6 @@ nav
 	nav
 		display: none;
 
-h2
-	&.title
-		font-size: $size-title
-		text-align: center
-
-section
-	margin: 5em 0
-
 
 
 #attention-grabber
@@ -162,137 +177,6 @@ footer
 	min-height: 100%
 	&.top-container
 		padding-top: 44px
-
-
-
-// **********
-// ABOUT PAGE
-// **********
-.about
-	
-	.images
-		img
-			width: 100%;
-
-	.image
-		position: relative
-
-		.info-window
-			margin-left: auto
-			margin-right: auto
-			height: 100%
-			position: absolute
-			top: 0
-			width: 100%
-			background-color: $font-white
-			font-size: 1em
-			opacity: 0
-			+transition-quick(opacity)
-			&:hover
-				opacity: 0.9
-
-		.info-window-inner
-			text-align: center;
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-o-transform: translateY(-50%);
-			transform: translateY(-50%);
-
-		p
-			font-weight: 200;
-			margin: 0 1em
-			letter-spacing: 2px
-			color: $font-primary
-		span
-			color: rgba($font-primary, 0.8)
-			font-size: 0.8em
-
-
-
-
-// **********
-// WORKS PAGE
-// **********
-.works
-
-	h3
-		font-size: $size-heading
-		color: $font-tertiary
-
-	.info-window
-		margin-left: auto
-		margin-right: auto
-		height: 100%
-		position: absolute
-		top: 0
-		width: 100%
-		background-color: $font-white
-		font-size: 1.25em
-		opacity: 0
-		+transition-quick(opacity)
-		&:hover
-			opacity: 0.9
-
-	.info-window-inner
-		text-align: center;
-		position: relative;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
-
-		p
-			font-weight: 400;
-			text-decoration: underline;
-			line-height: 14px
-			margin: 0;
-			color: $font-primary
-		span
-			color: rgba($font-primary, 0.8)
-			font-size: 0.8em
-
-.work-item
-	padding: 15px;
-	.work-item-inner
-		text-align: center
-		background: rgba($font-black, 0.95)
-		padding: 25px 0
-		box-shadow: -2px 2px 10px rgba(0,0,0,0.6);
-		position: relative
-		.screenshot
-			img
-				max-height: 200px
-
-.screenshots
-	text-align: center;
-.screenshot
-	margin-bottom: 10px
-	max-width: 100%
-	display: inline-block
-	margin: 10px;
-
-	img
-		max-width: 100%;
-		max-height: 700px
-
-.work
-	.details
-
-	.detail
-		margin: 10px 0
-
-	li
-		list-style: none
-		display: inline-block;
-		margin: 2px 5px;
-		padding: 5px 10px;
-		background-color: $font-secondary
-		border-radius: 5px
-
-	.tags
-		padding: 0;
-		color: $font-white
 
 
 

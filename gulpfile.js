@@ -4,10 +4,11 @@ var cleanCss = require('gulp-clean-css');
 var concatCss = require('gulp-concat-css');
 var autoprefixer = require('gulp-autoprefixer');
 
-var input = './public/sass/*.sass';
+var input = './public/sass/index.sass';
 var output = './public/css';
 var cssInput = './public/css/*.css';
 var dist = './public/dist';
+var inputWatch = './public/sass/partials/*.{scss,sass}';
 
 var sassOptions = {
   errLogToConsole: true,
@@ -34,7 +35,7 @@ gulp.task('watch', function() {
   return gulp
     // Watch the input folder for change,
     // and run `sass` task when something happens
-    .watch(input, ['sass', 'concat-minify-css'])
+    .watch(inputWatch, ['sass', 'concat-minify-css'])
     // When there is a change,
     // log a message in the console
     .on('change', function(event) {

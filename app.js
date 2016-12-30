@@ -68,6 +68,13 @@ hbs.registerHelper('formatDate', function(options) {
   return new Date(options.fn(this)).toDateString()
 })
 
+hbs.registerHelper('alternateSides', function(indexCount) {
+  if(indexCount % 2 === 0)
+    return 'r'
+  else
+    return 'l'
+})
+
 // Code for Handlebar partials
 var partialsFolder = path.join(__dirname, 'views', 'partials')
 hbs.registerPartials(partialsFolder)
