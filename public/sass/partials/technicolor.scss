@@ -85,9 +85,9 @@ $technicolor-hover:
   margin: 0;
   letter-spacing: 0.1em;
 }
-@media #{$media} and ($max: $md) {
+@media #{$media} and ($max: $xs) {
   #technicolor h1 {
-    font-size: 4.4em;
+    font-size: 2.8em;
   }
 }
 

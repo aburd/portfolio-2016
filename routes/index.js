@@ -12,7 +12,7 @@ mongoose.Promise = require('bluebird')
 router.get('/', function(req, res, next) {
   res.render('index', { 
   	title: 'aburd\'s Portfolio | aburdのポートフォリオ',
-  	layout: 'home-layout'
+  	layout: 'layout'
   });
 });
 

@@ -15,9 +15,9 @@ $font-white: #eee
 $background: #e8ffe8
 
 // typography
-$cover-size: 20em
-$size-title: 3em;
-$size-heading: 2em
+$cover-size: 20rem
+$size-title: 3rem;
+$size-heading: 2rem
 
 // media query stuff
 $media: screen;
@@ -56,7 +56,18 @@ body
 	font-size: 18px
 	color: $font-primary
 	background: linear-gradient($background, rgba($background, 0.2));
-	
+
+@media screen and (max-width: $md)
+	body
+		font-size: 16px	
+
+@media screen and (max-width: $sm)
+	body
+		font-size: 14px	
+
+@media screen and (max-width: $xs)
+	body
+		font-size: 12px	
 
 @media screen and ($min: $lg)
 	.container
@@ -85,7 +96,7 @@ td, th
 	padding: 0 10px 0 0
 
 section
-	margin: 5em 0
+	margin: 5rem 0
 
 #top-bar
 	margin: 0
@@ -103,8 +114,7 @@ section
 
 		&:first-child
 			a
-				margin-left: 15px
-				margin-top: 5px;
+				margin: 6px 0;
 				display: inline-block;
 		&:last-child
 			text-align: right;
@@ -122,11 +132,11 @@ nav
 				margin: 20px
 
 		li
-			font-size: 1.5em
+			font-size: 1.5rem
 			display: inline-block;
 			margin: 10px;
 			list-style: none
-			line-height: 1em
+			line-height: 1rem
 			+transition-1sec(border-bottom)
 			a
 				color: $font-white
@@ -138,22 +148,31 @@ nav
 					text-decoration: none
 
 @media #{$media} and ($max: $xs)
-	nav#top-nav
+	nav
 		display: none;
 
 
 
 #attention-grabber
-	border-bottom: 1px solid $font-primary;
+	border: 7px solid $font-primary;
+	margin: 10px 0;
+	background: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 10px;
 
 	span
-		font-size: 5em
+		font-size: 3rem
 
 	h1
-		font-size: 1.5em
+		font-size: 1.5rem
 		margin: 0;
 		font-weight: 200;
 		letter-spacing: 1px;
+
+	@media #{$media} and ($max: $xs)
+		span
+			font-size: 2rem
 
 footer
 	padding: 30px;
