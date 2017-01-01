@@ -1,0 +1,136 @@
+// media query stuff
+$media: screen;
+$min: min-width;
+$max: max-width;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 480px;
+
+$palette: (
+  0: transparent,
+  1: #00b9f6,
+  2: #008cd8,
+  3: #0443a4,
+  4: #740092,
+  5: #a40075,
+  6: #ff0000,
+  7: #ff5400,
+  8: #ffc400,
+  9: #fef300,
+  10: #fef300,
+  11: #bfe313,
+  12: #72cf3d,
+  13: #00b044,
+  14: #00924f
+);
+$pixel-size: 2.5vw;
+
+$technicolor-light: 
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14
+;
+$technicolor: 
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 0 0 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 0 0 0 0 5 5 6 6 7 7 0 0 9 9 10 10 11 11 0  0  13 13 14 14,
+  1 1 0 0 0 0 0 0 5 5 0 0 7 7 0 0 0 0 10 10 0  0  0  0  13 13 14 14,
+  1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  0  0  0  0  0  0  0  14 14,
+;
+$technicolor-hover: 
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+  1 1 0 0 3 3 4 4 0 0 6 6 7 7 8 8 0 0 10 10 11 11 12 12 13 13 0  0,
+  0 0 0 0 0 0 4 4 0 0 6 6 0 0 8 8 0 0 0  0  11 11 12 12 13 13 0  0,
+  0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 8 0 0 0  0  11 11 0  0  13 13 0  0,
+;
+  
+@function px($val) {
+  @return $val * $pixel-size;    
+}
+
+@function get_width($pixels) {
+  @return length(nth($pixels, 1));
+}
+
+@function get_height($pixels) {
+  @return length($pixels);
+}
+
+@function render_pixels($pixels, $height, $width, $top) {
+  $out: ();
+  
+  @for $row from 1 through $height {
+    @for $col from 1 through $width {
+      $row-pixels: nth($pixels, $row);
+      $color: map-get($palette, nth($row-pixels, $col));
+      @if $top {
+        $out: join(append( (), px($col) px($row) 0 rgba($color, 0.5), comma), $out); 
+      } @else {
+        $out: join(append( (), px($col) px($row) 0 $color, comma), $out); 
+      }
+    }
+  }
+  @return $out;
+}
+
+#technicolor h1 {
+  font-weight: 600;
+  color: #6d6e72;
+  font-size: 4.4em;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+@media #{$media} and ($max: $md) {
+  #technicolor h1 {
+    font-size: 4.4em;
+  }
+}
+
+.canvas {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: $pixel-size;
+    height: $pixel-size;
+    top: -$pixel-size;
+    left: -$pixel-size;
+    content: '';
+    transition: box-shadow 0.5s ease-in;
+  }
+}
+.technicolor-top {
+  width: px(get_width($technicolor-light));
+  height: px(get_height($technicolor-light));
+  
+  &::after {
+    box-shadow: render-pixels($technicolor-light, get_height($technicolor-light), get_width($technicolor-light), true);
+  }
+}
+.technicolor-bottom {
+  width: px(get_width($technicolor));
+  height: px(get_height($technicolor));
+  
+  &::after {
+    box-shadow: render-pixels($technicolor, get_height($technicolor), get_width($technicolor), false);
+  }
+}
+.technicolor-bottom:hover {
+  width: px(get_width($technicolor-hover));
+  height: px(get_height($technicolor-hover));
+  
+  &::after {
+    position: absolute;
+    width: $pixel-size;
+    height: $pixel-size;
+    top: -$pixel-size;
+    left: -$pixel-size;
+    content: '';
+    box-shadow: render-pixels($technicolor-hover, get_height($technicolor-hover), get_width($technicolor-hover), false);
+  }
+}

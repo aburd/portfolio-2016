@@ -58,9 +58,9 @@ body
 	background: linear-gradient($background, rgba($background, 0.2));
 	
 
-@media screen and (min-width: 1200px)
+@media screen and ($min: $lg)
 	.container
-		width: 1200px;
+		width: $lg;
 
 a
 	color: $font-secondary
@@ -138,7 +138,7 @@ nav
 					text-decoration: none
 
 @media #{$media} and ($max: $xs)
-	nav
+	nav#top-nav
 		display: none;
 
 
