@@ -124,12 +124,7 @@ nav
 
 	#main-nav
 		padding: 0
-		margin: 0
-
-		&.home
-			li
-				font-size: $cover-size
-				margin: 20px
+		margin: 4px 0
 
 		li
 			font-size: 1.5rem
@@ -142,15 +137,56 @@ nav
 				color: $font-white
 				text-decoration: none
 				font-weight: 200
+				font-size: 3rem;
+				margin: 5px 0;
 
 				&:hover
 					color: $font-secondary
 					text-decoration: none
 
-@media #{$media} and ($max: $xs)
-	nav
-		display: none;
+#hamburger
+	font-size: 2.2rem;
+	margin-top: 5px;
+	float: right;
+	border: 1px solid $background;
+	border-radius: 5px;
+	i
+		color: $background
 
+.sidebar-nav
+	position: fixed
+	top: 43px
+	width: 100%
+	left: 0
+	display: none
+	z-index: 200
+	text-transform: uppercase
+	font-family: $title-font
+	background: $font-white
+
+	ul
+		padding: 0
+
+	li
+		list-style: none
+		font-size: 1.5rem
+
+		a
+			display: inline-block
+			padding: 1rem
+			margin: 1rem
+			width: 100%
+			transition: none
+
+			&:hover, &:active
+				color: $font-white
+				background: $font-secondary
+				text-decoration: none
+
+
+@media #{$media} and ($max: $xs)
+	#main-nav
+		display: none
 
 
 #attention-grabber
@@ -194,9 +230,6 @@ footer
 
 .container
 	min-height: 100%
-	&.top-container
-		padding-top: 44px
-
 
 
 // 404s and stuff
