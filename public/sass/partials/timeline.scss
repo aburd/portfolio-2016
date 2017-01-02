@@ -1,3 +1,5 @@
+$dot: 20px;
+$dot-sm: 18px;
 /* ================ The Timeline ================ */
 
 .timeline {
@@ -91,8 +93,8 @@
   right: -40px;
   content: ' ';
   display: block;
-  width: 20px;
-  height: 20px;
+  width: $dot;
+  height: $dot;
   margin-top: -10px;
   background: #fff;
   border-radius: 10px;
@@ -204,8 +206,8 @@
 	left: 50%;
 	content: ' ';
 	display: block;
-	width: 12px;
-	height: 12px;
+	width: $dot-sm;
+	height: $dot-sm;
 	margin-left: -9px;
 	background: #fff;
 	border-radius: 10px;
