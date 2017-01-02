@@ -39,15 +39,15 @@ $technicolor:
   1 1 0 0 0 0 0 0 5 5 0 0 7 7 0 0 0 0 10 10 0  0  0  0  13 13 14 14,
   1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  0  0  0  0  0  0  0  14 14,
 ;
-$technicolor-hover: 
-  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
-  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
-  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
-  1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
-  1 1 0 0 3 3 4 4 0 0 6 6 7 7 8 8 0 0 10 10 11 11 12 12 13 13 0  0,
-  0 0 0 0 0 0 4 4 0 0 6 6 0 0 8 8 0 0 0  0  11 11 12 12 13 13 0  0,
-  0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 8 0 0 0  0  11 11 0  0  13 13 0  0,
-;
+// $technicolor-hover: 
+//   1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+//   1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+//   1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+//   1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14,
+//   1 1 0 0 3 3 4 4 0 0 6 6 7 7 8 8 0 0 10 10 11 11 12 12 13 13 0  0,
+//   0 0 0 0 0 0 4 4 0 0 6 6 0 0 8 8 0 0 0  0  11 11 12 12 13 13 0  0,
+//   0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 8 0 0 0  0  11 11 0  0  13 13 0  0,
+// ;
   
 @function px($val) {
   @return $val * $pixel-size;    
@@ -101,7 +101,7 @@ $technicolor-hover:
     top: -$pixel-size;
     left: -$pixel-size;
     content: '';
-    transition: box-shadow 0.5s ease-in;
+    // transition: box-shadow 0.5s ease-in;
   }
 }
 .technicolor-top {
@@ -120,17 +120,93 @@ $technicolor-hover:
     box-shadow: render-pixels($technicolor, get_height($technicolor), get_width($technicolor), false);
   }
 }
-.technicolor-bottom:hover {
-  width: px(get_width($technicolor-hover));
-  height: px(get_height($technicolor-hover));
+// .technicolor-bottom:hover {
+//   width: px(get_width($technicolor-hover));
+//   height: px(get_height($technicolor-hover));
   
-  &::after {
-    position: absolute;
-    width: $pixel-size;
-    height: $pixel-size;
-    top: -$pixel-size;
-    left: -$pixel-size;
-    content: '';
-    box-shadow: render-pixels($technicolor-hover, get_height($technicolor-hover), get_width($technicolor-hover), false);
+//   &::after {
+//     position: absolute;
+//     width: $pixel-size;
+//     height: $pixel-size;
+//     top: -$pixel-size;
+//     left: -$pixel-size;
+//     content: '';
+//     box-shadow: render-pixels($technicolor-hover, get_height($technicolor-hover), get_width($technicolor-hover), false);
+//   }
+// }
+
+// Pong
+$pad-width: 6vw;
+$pad-height: 1.5vw;
+$ball-size: 1.5vw;
+
+@function correct($calc, $padWidth) {
+  @return $calc - ($padWidth / 2);
+}
+
+@keyframes ball {
+  0% {
+    transform: translate3d(0, 0, 0)
+  }
+  25% {
+    transform: translate3d(px(get_width($technicolor)) / 2, px(get_height($technicolor)), 0)
+  }
+  50% {
+    transform: translate3d(px(get_width($technicolor)) - $ball-size, 0, 0)  
+  }
+  75% {
+    transform: translate3d(px(get_width($technicolor)) / 2, px(get_height($technicolor)), 0)
+  }
+  100% {
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+
+@keyframes pad {
+  0% {
+    transform: translate3d(
+      correct(px(get_width($technicolor))*0.25, $pad-width), 
+      px(get_height($technicolor)), 
+      0
+    )
+  }
+  50% {
+    transform: translate3d(
+      correct(px(get_width($technicolor))*0.75, $pad-width), 
+      px(get_height($technicolor)), 
+      0
+    )  
+  }
+  100% {
+    transform: translate3d(
+      correct(px(get_width($technicolor))*0.25, $pad-width), 
+      px(get_height($technicolor)), 
+      0
+    )
+  }
+}
+  
+
+.pong {
+  width: px(get_width($technicolor));
+  height: px(get_height($technicolor));
+
+  .pad {
+    float: left;
+    display: inline-block;
+    width: $pad-width;
+    height: $pad-height;
+    background-color: $font-primary;
+    margin-left: -$ball-size;
+    animation: pad 3s infinite ease-in-out;
+ }
+ .ball {
+    display: inline-block;
+    width: $ball-size;
+    height: $ball-size;
+    float: left;
+    background-color: $font-primary;
+    animation: ball 3s infinite linear;
   }
 }

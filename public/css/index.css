@@ -408,8 +408,6 @@ footer ul li {
   top: -2.5vw;
   left: -2.5vw;
   content: '';
-  -webkit-transition: box-shadow 0.5s ease-in;
-  transition: box-shadow 0.5s ease-in;
 }
 
 .technicolor-top {
@@ -430,19 +428,106 @@ footer ul li {
   box-shadow: 70vw 17.5vw 0 #00924f, 67.5vw 17.5vw 0 #00924f, 65vw 17.5vw 0 transparent, 62.5vw 17.5vw 0 transparent, 60vw 17.5vw 0 transparent, 57.5vw 17.5vw 0 transparent, 55vw 17.5vw 0 transparent, 52.5vw 17.5vw 0 transparent, 50vw 17.5vw 0 transparent, 47.5vw 17.5vw 0 transparent, 45vw 17.5vw 0 transparent, 42.5vw 17.5vw 0 transparent, 40vw 17.5vw 0 transparent, 37.5vw 17.5vw 0 transparent, 35vw 17.5vw 0 transparent, 32.5vw 17.5vw 0 transparent, 30vw 17.5vw 0 transparent, 27.5vw 17.5vw 0 transparent, 25vw 17.5vw 0 transparent, 22.5vw 17.5vw 0 transparent, 20vw 17.5vw 0 transparent, 17.5vw 17.5vw 0 transparent, 15vw 17.5vw 0 transparent, 12.5vw 17.5vw 0 transparent, 10vw 17.5vw 0 transparent, 7.5vw 17.5vw 0 transparent, 5vw 17.5vw 0 #00b9f6, 2.5vw 17.5vw 0 #00b9f6, 70vw 15vw 0 #00924f, 67.5vw 15vw 0 #00924f, 65vw 15vw 0 #00b044, 62.5vw 15vw 0 #00b044, 60vw 15vw 0 transparent, 57.5vw 15vw 0 transparent, 55vw 15vw 0 transparent, 52.5vw 15vw 0 transparent, 50vw 15vw 0 #fef300, 47.5vw 15vw 0 #fef300, 45vw 15vw 0 transparent, 42.5vw 15vw 0 transparent, 40vw 15vw 0 transparent, 37.5vw 15vw 0 transparent, 35vw 15vw 0 #ff5400, 32.5vw 15vw 0 #ff5400, 30vw 15vw 0 transparent, 27.5vw 15vw 0 transparent, 25vw 15vw 0 #a40075, 22.5vw 15vw 0 #a40075, 20vw 15vw 0 transparent, 17.5vw 15vw 0 transparent, 15vw 15vw 0 transparent, 12.5vw 15vw 0 transparent, 10vw 15vw 0 transparent, 7.5vw 15vw 0 transparent, 5vw 15vw 0 #00b9f6, 2.5vw 15vw 0 #00b9f6, 70vw 12.5vw 0 #00924f, 67.5vw 12.5vw 0 #00924f, 65vw 12.5vw 0 #00b044, 62.5vw 12.5vw 0 #00b044, 60vw 12.5vw 0 transparent, 57.5vw 12.5vw 0 transparent, 55vw 12.5vw 0 #bfe313, 52.5vw 12.5vw 0 #bfe313, 50vw 12.5vw 0 #fef300, 47.5vw 12.5vw 0 #fef300, 45vw 12.5vw 0 #fef300, 42.5vw 12.5vw 0 #fef300, 40vw 12.5vw 0 transparent, 37.5vw 12.5vw 0 transparent, 35vw 12.5vw 0 #ff5400, 32.5vw 12.5vw 0 #ff5400, 30vw 12.5vw 0 #ff0000, 27.5vw 12.5vw 0 #ff0000, 25vw 12.5vw 0 #a40075, 22.5vw 12.5vw 0 #a40075, 20vw 12.5vw 0 transparent, 17.5vw 12.5vw 0 transparent, 15vw 12.5vw 0 transparent, 12.5vw 12.5vw 0 transparent, 10vw 12.5vw 0 #008cd8, 7.5vw 12.5vw 0 #008cd8, 5vw 12.5vw 0 #00b9f6, 2.5vw 12.5vw 0 #00b9f6, 70vw 10vw 0 #00924f, 67.5vw 10vw 0 #00924f, 65vw 10vw 0 #00b044, 62.5vw 10vw 0 #00b044, 60vw 10vw 0 #72cf3d, 57.5vw 10vw 0 #72cf3d, 55vw 10vw 0 #bfe313, 52.5vw 10vw 0 #bfe313, 50vw 10vw 0 #fef300, 47.5vw 10vw 0 #fef300, 45vw 10vw 0 #fef300, 42.5vw 10vw 0 #fef300, 40vw 10vw 0 #ffc400, 37.5vw 10vw 0 #ffc400, 35vw 10vw 0 #ff5400, 32.5vw 10vw 0 #ff5400, 30vw 10vw 0 #ff0000, 27.5vw 10vw 0 #ff0000, 25vw 10vw 0 #a40075, 22.5vw 10vw 0 #a40075, 20vw 10vw 0 #740092, 17.5vw 10vw 0 #740092, 15vw 10vw 0 transparent, 12.5vw 10vw 0 transparent, 10vw 10vw 0 #008cd8, 7.5vw 10vw 0 #008cd8, 5vw 10vw 0 #00b9f6, 2.5vw 10vw 0 #00b9f6, 70vw 7.5vw 0 #00924f, 67.5vw 7.5vw 0 #00924f, 65vw 7.5vw 0 #00b044, 62.5vw 7.5vw 0 #00b044, 60vw 7.5vw 0 #72cf3d, 57.5vw 7.5vw 0 #72cf3d, 55vw 7.5vw 0 #bfe313, 52.5vw 7.5vw 0 #bfe313, 50vw 7.5vw 0 #fef300, 47.5vw 7.5vw 0 #fef300, 45vw 7.5vw 0 #fef300, 42.5vw 7.5vw 0 #fef300, 40vw 7.5vw 0 #ffc400, 37.5vw 7.5vw 0 #ffc400, 35vw 7.5vw 0 #ff5400, 32.5vw 7.5vw 0 #ff5400, 30vw 7.5vw 0 #ff0000, 27.5vw 7.5vw 0 #ff0000, 25vw 7.5vw 0 #a40075, 22.5vw 7.5vw 0 #a40075, 20vw 7.5vw 0 #740092, 17.5vw 7.5vw 0 #740092, 15vw 7.5vw 0 #0443a4, 12.5vw 7.5vw 0 #0443a4, 10vw 7.5vw 0 #008cd8, 7.5vw 7.5vw 0 #008cd8, 5vw 7.5vw 0 #00b9f6, 2.5vw 7.5vw 0 #00b9f6, 70vw 5vw 0 #00924f, 67.5vw 5vw 0 #00924f, 65vw 5vw 0 #00b044, 62.5vw 5vw 0 #00b044, 60vw 5vw 0 #72cf3d, 57.5vw 5vw 0 #72cf3d, 55vw 5vw 0 #bfe313, 52.5vw 5vw 0 #bfe313, 50vw 5vw 0 #fef300, 47.5vw 5vw 0 #fef300, 45vw 5vw 0 #fef300, 42.5vw 5vw 0 #fef300, 40vw 5vw 0 #ffc400, 37.5vw 5vw 0 #ffc400, 35vw 5vw 0 #ff5400, 32.5vw 5vw 0 #ff5400, 30vw 5vw 0 #ff0000, 27.5vw 5vw 0 #ff0000, 25vw 5vw 0 #a40075, 22.5vw 5vw 0 #a40075, 20vw 5vw 0 #740092, 17.5vw 5vw 0 #740092, 15vw 5vw 0 #0443a4, 12.5vw 5vw 0 #0443a4, 10vw 5vw 0 #008cd8, 7.5vw 5vw 0 #008cd8, 5vw 5vw 0 #00b9f6, 2.5vw 5vw 0 #00b9f6, 70vw 2.5vw 0 #00924f, 67.5vw 2.5vw 0 #00924f, 65vw 2.5vw 0 #00b044, 62.5vw 2.5vw 0 #00b044, 60vw 2.5vw 0 #72cf3d, 57.5vw 2.5vw 0 #72cf3d, 55vw 2.5vw 0 #bfe313, 52.5vw 2.5vw 0 #bfe313, 50vw 2.5vw 0 #fef300, 47.5vw 2.5vw 0 #fef300, 45vw 2.5vw 0 #fef300, 42.5vw 2.5vw 0 #fef300, 40vw 2.5vw 0 #ffc400, 37.5vw 2.5vw 0 #ffc400, 35vw 2.5vw 0 #ff5400, 32.5vw 2.5vw 0 #ff5400, 30vw 2.5vw 0 #ff0000, 27.5vw 2.5vw 0 #ff0000, 25vw 2.5vw 0 #a40075, 22.5vw 2.5vw 0 #a40075, 20vw 2.5vw 0 #740092, 17.5vw 2.5vw 0 #740092, 15vw 2.5vw 0 #0443a4, 12.5vw 2.5vw 0 #0443a4, 10vw 2.5vw 0 #008cd8, 7.5vw 2.5vw 0 #008cd8, 5vw 2.5vw 0 #00b9f6, 2.5vw 2.5vw 0 #00b9f6;
 }
 
-.technicolor-bottom:hover {
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: translate3d(35vw, 17.5vw, 0);
+            transform: translate3d(35vw, 17.5vw, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(68.5vw, 0, 0);
+            transform: translate3d(68.5vw, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(35vw, 17.5vw, 0);
+            transform: translate3d(35vw, 17.5vw, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes ball {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: translate3d(35vw, 17.5vw, 0);
+            transform: translate3d(35vw, 17.5vw, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(68.5vw, 0, 0);
+            transform: translate3d(68.5vw, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(35vw, 17.5vw, 0);
+            transform: translate3d(35vw, 17.5vw, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes pad {
+  0% {
+    -webkit-transform: translate3d(14.5vw, 17.5vw, 0);
+            transform: translate3d(14.5vw, 17.5vw, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(49.5vw, 17.5vw, 0);
+            transform: translate3d(49.5vw, 17.5vw, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(14.5vw, 17.5vw, 0);
+            transform: translate3d(14.5vw, 17.5vw, 0);
+  }
+}
+
+@keyframes pad {
+  0% {
+    -webkit-transform: translate3d(14.5vw, 17.5vw, 0);
+            transform: translate3d(14.5vw, 17.5vw, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(49.5vw, 17.5vw, 0);
+            transform: translate3d(49.5vw, 17.5vw, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(14.5vw, 17.5vw, 0);
+            transform: translate3d(14.5vw, 17.5vw, 0);
+  }
+}
+
+.pong {
   width: 70vw;
   height: 17.5vw;
 }
 
-.technicolor-bottom:hover::after {
-  position: absolute;
-  width: 2.5vw;
-  height: 2.5vw;
-  top: -2.5vw;
-  left: -2.5vw;
-  content: '';
-  box-shadow: 70vw 17.5vw 0 transparent, 67.5vw 17.5vw 0 transparent, 65vw 17.5vw 0 #00b044, 62.5vw 17.5vw 0 #00b044, 60vw 17.5vw 0 transparent, 57.5vw 17.5vw 0 transparent, 55vw 17.5vw 0 #bfe313, 52.5vw 17.5vw 0 #bfe313, 50vw 17.5vw 0 transparent, 47.5vw 17.5vw 0 transparent, 45vw 17.5vw 0 transparent, 42.5vw 17.5vw 0 transparent, 40vw 17.5vw 0 #ffc400, 37.5vw 17.5vw 0 #ffc400, 35vw 17.5vw 0 transparent, 32.5vw 17.5vw 0 transparent, 30vw 17.5vw 0 transparent, 27.5vw 17.5vw 0 transparent, 25vw 17.5vw 0 transparent, 22.5vw 17.5vw 0 transparent, 20vw 17.5vw 0 transparent, 17.5vw 17.5vw 0 transparent, 15vw 17.5vw 0 transparent, 12.5vw 17.5vw 0 transparent, 10vw 17.5vw 0 transparent, 7.5vw 17.5vw 0 transparent, 5vw 17.5vw 0 transparent, 2.5vw 17.5vw 0 transparent, 70vw 15vw 0 transparent, 67.5vw 15vw 0 transparent, 65vw 15vw 0 #00b044, 62.5vw 15vw 0 #00b044, 60vw 15vw 0 #72cf3d, 57.5vw 15vw 0 #72cf3d, 55vw 15vw 0 #bfe313, 52.5vw 15vw 0 #bfe313, 50vw 15vw 0 transparent, 47.5vw 15vw 0 transparent, 45vw 15vw 0 transparent, 42.5vw 15vw 0 transparent, 40vw 15vw 0 #ffc400, 37.5vw 15vw 0 #ffc400, 35vw 15vw 0 transparent, 32.5vw 15vw 0 transparent, 30vw 15vw 0 #ff0000, 27.5vw 15vw 0 #ff0000, 25vw 15vw 0 transparent, 22.5vw 15vw 0 transparent, 20vw 15vw 0 #740092, 17.5vw 15vw 0 #740092, 15vw 15vw 0 transparent, 12.5vw 15vw 0 transparent, 10vw 15vw 0 transparent, 7.5vw 15vw 0 transparent, 5vw 15vw 0 transparent, 2.5vw 15vw 0 transparent, 70vw 12.5vw 0 transparent, 67.5vw 12.5vw 0 transparent, 65vw 12.5vw 0 #00b044, 62.5vw 12.5vw 0 #00b044, 60vw 12.5vw 0 #72cf3d, 57.5vw 12.5vw 0 #72cf3d, 55vw 12.5vw 0 #bfe313, 52.5vw 12.5vw 0 #bfe313, 50vw 12.5vw 0 #fef300, 47.5vw 12.5vw 0 #fef300, 45vw 12.5vw 0 transparent, 42.5vw 12.5vw 0 transparent, 40vw 12.5vw 0 #ffc400, 37.5vw 12.5vw 0 #ffc400, 35vw 12.5vw 0 #ff5400, 32.5vw 12.5vw 0 #ff5400, 30vw 12.5vw 0 #ff0000, 27.5vw 12.5vw 0 #ff0000, 25vw 12.5vw 0 transparent, 22.5vw 12.5vw 0 transparent, 20vw 12.5vw 0 #740092, 17.5vw 12.5vw 0 #740092, 15vw 12.5vw 0 #0443a4, 12.5vw 12.5vw 0 #0443a4, 10vw 12.5vw 0 transparent, 7.5vw 12.5vw 0 transparent, 5vw 12.5vw 0 #00b9f6, 2.5vw 12.5vw 0 #00b9f6, 70vw 10vw 0 #00924f, 67.5vw 10vw 0 #00924f, 65vw 10vw 0 #00b044, 62.5vw 10vw 0 #00b044, 60vw 10vw 0 #72cf3d, 57.5vw 10vw 0 #72cf3d, 55vw 10vw 0 #bfe313, 52.5vw 10vw 0 #bfe313, 50vw 10vw 0 #fef300, 47.5vw 10vw 0 #fef300, 45vw 10vw 0 #fef300, 42.5vw 10vw 0 #fef300, 40vw 10vw 0 #ffc400, 37.5vw 10vw 0 #ffc400, 35vw 10vw 0 #ff5400, 32.5vw 10vw 0 #ff5400, 30vw 10vw 0 #ff0000, 27.5vw 10vw 0 #ff0000, 25vw 10vw 0 #a40075, 22.5vw 10vw 0 #a40075, 20vw 10vw 0 #740092, 17.5vw 10vw 0 #740092, 15vw 10vw 0 #0443a4, 12.5vw 10vw 0 #0443a4, 10vw 10vw 0 #008cd8, 7.5vw 10vw 0 #008cd8, 5vw 10vw 0 #00b9f6, 2.5vw 10vw 0 #00b9f6, 70vw 7.5vw 0 #00924f, 67.5vw 7.5vw 0 #00924f, 65vw 7.5vw 0 #00b044, 62.5vw 7.5vw 0 #00b044, 60vw 7.5vw 0 #72cf3d, 57.5vw 7.5vw 0 #72cf3d, 55vw 7.5vw 0 #bfe313, 52.5vw 7.5vw 0 #bfe313, 50vw 7.5vw 0 #fef300, 47.5vw 7.5vw 0 #fef300, 45vw 7.5vw 0 #fef300, 42.5vw 7.5vw 0 #fef300, 40vw 7.5vw 0 #ffc400, 37.5vw 7.5vw 0 #ffc400, 35vw 7.5vw 0 #ff5400, 32.5vw 7.5vw 0 #ff5400, 30vw 7.5vw 0 #ff0000, 27.5vw 7.5vw 0 #ff0000, 25vw 7.5vw 0 #a40075, 22.5vw 7.5vw 0 #a40075, 20vw 7.5vw 0 #740092, 17.5vw 7.5vw 0 #740092, 15vw 7.5vw 0 #0443a4, 12.5vw 7.5vw 0 #0443a4, 10vw 7.5vw 0 #008cd8, 7.5vw 7.5vw 0 #008cd8, 5vw 7.5vw 0 #00b9f6, 2.5vw 7.5vw 0 #00b9f6, 70vw 5vw 0 #00924f, 67.5vw 5vw 0 #00924f, 65vw 5vw 0 #00b044, 62.5vw 5vw 0 #00b044, 60vw 5vw 0 #72cf3d, 57.5vw 5vw 0 #72cf3d, 55vw 5vw 0 #bfe313, 52.5vw 5vw 0 #bfe313, 50vw 5vw 0 #fef300, 47.5vw 5vw 0 #fef300, 45vw 5vw 0 #fef300, 42.5vw 5vw 0 #fef300, 40vw 5vw 0 #ffc400, 37.5vw 5vw 0 #ffc400, 35vw 5vw 0 #ff5400, 32.5vw 5vw 0 #ff5400, 30vw 5vw 0 #ff0000, 27.5vw 5vw 0 #ff0000, 25vw 5vw 0 #a40075, 22.5vw 5vw 0 #a40075, 20vw 5vw 0 #740092, 17.5vw 5vw 0 #740092, 15vw 5vw 0 #0443a4, 12.5vw 5vw 0 #0443a4, 10vw 5vw 0 #008cd8, 7.5vw 5vw 0 #008cd8, 5vw 5vw 0 #00b9f6, 2.5vw 5vw 0 #00b9f6, 70vw 2.5vw 0 #00924f, 67.5vw 2.5vw 0 #00924f, 65vw 2.5vw 0 #00b044, 62.5vw 2.5vw 0 #00b044, 60vw 2.5vw 0 #72cf3d, 57.5vw 2.5vw 0 #72cf3d, 55vw 2.5vw 0 #bfe313, 52.5vw 2.5vw 0 #bfe313, 50vw 2.5vw 0 #fef300, 47.5vw 2.5vw 0 #fef300, 45vw 2.5vw 0 #fef300, 42.5vw 2.5vw 0 #fef300, 40vw 2.5vw 0 #ffc400, 37.5vw 2.5vw 0 #ffc400, 35vw 2.5vw 0 #ff5400, 32.5vw 2.5vw 0 #ff5400, 30vw 2.5vw 0 #ff0000, 27.5vw 2.5vw 0 #ff0000, 25vw 2.5vw 0 #a40075, 22.5vw 2.5vw 0 #a40075, 20vw 2.5vw 0 #740092, 17.5vw 2.5vw 0 #740092, 15vw 2.5vw 0 #0443a4, 12.5vw 2.5vw 0 #0443a4, 10vw 2.5vw 0 #008cd8, 7.5vw 2.5vw 0 #008cd8, 5vw 2.5vw 0 #00b9f6, 2.5vw 2.5vw 0 #00b9f6;
+.pong .pad {
+  float: left;
+  display: inline-block;
+  width: 6vw;
+  height: 1.5vw;
+  background-color: #1E7F77;
+  margin-left: -1.5vw;
+  -webkit-animation: pad 3s infinite ease-in-out;
+          animation: pad 3s infinite ease-in-out;
+}
+
+.pong .ball {
+  display: inline-block;
+  width: 1.5vw;
+  height: 1.5vw;
+  float: left;
+  background-color: #1E7F77;
+  -webkit-animation: ball 3s infinite linear;
+          animation: ball 3s infinite linear;
 }
 
 /* ================ The Timeline ================ */
