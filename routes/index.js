@@ -91,7 +91,7 @@ router.get('/works/:name', function(req, res, next) {
 					if(work){
 						res.render('work.hbs', {
 							title: 'a work by aburd',
-							pageTitle: 'powerbombing css, elbow-dropping js',
+							pageTitle: 'Work',
 							work: work,
 							layout: 'layout'
 						})
@@ -111,7 +111,7 @@ router.get('/works/:name', function(req, res, next) {
 
 
 /*
-/ GET individual works
+/ GET contact page
 */
 router.get('/contact', function(req,res,next){
 	res.render('contact.hbs', {

@@ -1,35 +1,41 @@
 <section>
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="title">{{pageTitle}}</h1>
+		</div>
+	</div>
 	{{#work}}
 	<div class="row work">
-		<h2 class="title">{{pageTitle}}</h2>
-		<div class="col-md-4" style="padding: 0">
-			<div class="details">
-				<h3>{{name}}</h3>
-				<div class="detail">
-					<strong>Agency:</strong> {{agency}}
-				</div>
-				<div class="detail">
-					<strong>Description:</strong> {{#breakup}}{{description}}{{/breakup}}
-				</div>
-				<div class="detail">
-					<strong>Date:</strong> {{#formatDate}}{{date}}{{/formatDate}}
-				</div>
-				<div class="detail">
-					<strong>Tags:</strong>
-					<ul class="tags">
-						{{#tags}}
-						<li>{{this}}</li>
-						{{/tags}}
-					</ul>
+		<div class="col-xs-12">
+			<div class="col-md-4" style="padding: 0">
+				<div class="details">
+					<h2>{{name}}</h2>
+					<div class="detail">
+						<strong>Agency:</strong> {{agency}}
+					</div>
+					<div class="detail">
+						<strong>Description:</strong> {{#breakup}}{{description}}{{/breakup}}
+					</div>
+					<div class="detail">
+						<strong>Date:</strong> {{#formatDate}}{{date}}{{/formatDate}}
+					</div>
+					<div class="detail">
+						<strong>Tags:</strong>
+						<ul class="tags">
+							{{#tags}}
+							<li>{{this}}</li>
+							{{/tags}}
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-8 screenshots" style="padding: 0">
-			{{#screenshots}}
-			<div class="screenshot">
-				<img src="/images/{{this}}" alt="{{name}}">
+			<div class="col-md-8 screenshots" style="padding: 0">
+				{{#screenshots}}
+				<div class="screenshot">
+					<img src="/images/{{this}}" alt="{{name}}">
+				</div>
+				{{/screenshots}}
 			</div>
-			{{/screenshots}}
 		</div> 
 	</div>
 	{{/work}}
