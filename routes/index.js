@@ -25,13 +25,14 @@ router.get('/about', function(req, res, next) {
 	db.once('open', function() {
 		var query = TimelineEvent.find({}).exec()
 		query
-			.then((timelineEvents) => {
-				timelineEvents.sort((event, nextEvent) => {
+			.then(function(timelineEvents) {
+				timelineEvents.sort(function(event, nextEvent) {
 					return nextEvent.date.valueOf() - event.date.valueOf()
 				})
-				var formattedTimelineEvents = timelineEvents.map((event) => {
+				var formattedTimelineEvents = timelineEvents.map(function(event) {
 					var doc = event['_doc']
-					return Object.assign(doc, {date: event.getFormattedDate()})
+					doc.date = event.getFormattedDate()
+					return doc
 				})
 
 				res.render('about', { 
@@ -56,8 +57,8 @@ router.get('/works', function(req, res, next) {
 	db.once('open', function(){
 		var query = Work.find({}).exec()
 			query
-				.then((works) => {
-					var filteredWorks = works.map((work) => {
+				.then(function(works) {
+					var filteredWorks = works.map(function(work) {
 						return {
 							name: work.name,
 							url: work.url,
@@ -87,7 +88,7 @@ router.get('/works/:name', function(req, res, next) {
 	db.once('open', function(){
 		var query = Work.findOne({ url: req.params.name }).exec()
 			query
-				.then((work) => {
+				.then(function(work) {
 					if(work){
 						res.render('work.hbs', {
 							title: 'a work by aburd',
@@ -132,7 +133,7 @@ router.get('/data/:name', function(req, res, next) {
 			case "all":
 				var query = Work.find({}).exec()
 				query
-					.then((works) => {
+					.then(function(works) {
 						res.json(works)
 						db.close()
 					})
@@ -140,15 +141,17 @@ router.get('/data/:name', function(req, res, next) {
 			case "name-list":
 				var query = Work.find({}).exec()
 				query
-					.map( work => work.name )
-					.then((names) => {
+					.map( function(work) { 
+						return work.name 
+					})
+					.then(function(names) {
 						res.json(names)
 						db.close()
 					})
 			// Query a specific work
 			default:
 				var query = Work.findOne({url: req.params.name}).exec()
-				query.then((work) => {
+				query.then(function(work) {
 					res.json(work)
 					db.close()
 				})

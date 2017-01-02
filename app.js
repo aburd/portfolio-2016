@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -25,7 +24,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -61,7 +59,11 @@ app.use(function(err, req, res, next) {
 // Handlebars helpers
 hbs.registerHelper('breakup', function(options){
   var pArr = options.fn(this).split(/\/n\/n/g)
-  return new hbs.SafeString( pArr.map( p => "<p>"+p+"</p>").join("") )
+  return new hbs.SafeString( pArr.map( function(p) { 
+      return "<p>"+p+"</p>" 
+    })
+    .join("") 
+  )
 })
 
 hbs.registerHelper('formatDate', function(options) {
