@@ -302,7 +302,7 @@ footer ul li {
   top: 0;
   width: 100%;
   background-color: #eee;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -330,7 +330,7 @@ footer ul li {
 
 .works .info-window-inner span {
   color: rgba(30, 127, 119, 0.8);
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 .work-item {
