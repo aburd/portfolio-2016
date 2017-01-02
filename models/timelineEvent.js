@@ -23,7 +23,10 @@ var timelineEventSchema = mongoose.Schema({
 })
 
 timelineEventSchema.methods.getFormattedDate = function() {
-	return this.date.toLocaleDateString()
+	var day = this.date.getDay() + 1,
+			month = this.date.getMonth() + 1,
+			year = this.date.getFullYear();
+	return year + '/' + month + '/' + day;
 }
 timelineEventSchema.methods.getTitle = function() {
 	return this.name + ' - ' + this.place
