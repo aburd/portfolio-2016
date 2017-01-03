@@ -48,8 +48,17 @@ a:hover {
 }
 
 h1 {
+  font-size: 3rem;
   font-family: 'Press Start 2P';
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 h2, h3 {
@@ -57,17 +66,12 @@ h2, h3 {
   text-decoration: underline;
 }
 
-h2.title {
-  font-size: 3rem;
-  text-align: center;
-}
-
 td, th {
   padding: 0 10px 0 0;
 }
 
 section {
-  margin: 5rem 0;
+  margin: 7rem 0;
 }
 
 #top-bar {
@@ -81,35 +85,43 @@ section {
   z-index: 100;
 }
 
-#top-bar .col-xs-6 img {
-  width: 100px;
+#top-bar h1 {
+  font-size: 3rem;
+  margin: 1.3rem 1rem 1rem 1rem;
+  letter-spacing: 1rem;
 }
 
-#top-bar .col-xs-6:first-child a {
-  margin: 6px 0;
-  display: inline-block;
+#top-bar h1 a {
+  color: #eee;
 }
 
-#top-bar .col-xs-6:last-child {
+#top-bar h1 a:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
+#top-bar .col-xs-8 {
   text-align: right;
 }
 
 nav {
   padding: 0;
   display: inline-block;
+  text-align: right;
 }
 
 nav #main-nav {
   padding: 0;
-  margin: 4px 0;
+  margin: 1rem 0;
+  font-family: "Press Start 2P", serif;
 }
 
 nav #main-nav li {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 200;
   display: inline-block;
-  margin: 10px;
+  margin: 0.4rem;
   list-style: none;
-  line-height: 1rem;
   -webkit-transition: border-bottom 1s;
   transition: border-bottom 1s;
 }
@@ -117,18 +129,15 @@ nav #main-nav li {
 nav #main-nav li a {
   color: #eee;
   text-decoration: none;
-  font-weight: 200;
-  font-size: 3rem;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 nav #main-nav li a:hover {
-  color: #B2440F;
   text-decoration: none;
 }
 
 #hamburger {
-  font-size: 2.2rem;
+  font-size: 3rem;
   margin-top: 5px;
   float: right;
   border: 1px solid #e8ffe8;
@@ -157,7 +166,7 @@ nav #main-nav li a:hover {
 
 .sidebar-nav li {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .sidebar-nav li a {
@@ -195,7 +204,7 @@ nav #main-nav li a:hover {
 }
 
 #attention-grabber h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
   font-weight: 200;
   letter-spacing: 1px;
@@ -287,11 +296,6 @@ footer ul li {
 .about .image span {
   color: rgba(30, 127, 119, 0.8);
   font-size: 0.8em;
-}
-
-.works h3 {
-  font-size: 2rem;
-  color: #FF8449;
 }
 
 .works .info-window {

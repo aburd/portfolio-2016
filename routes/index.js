@@ -68,7 +68,7 @@ router.get('/works', function(req, res, next) {
 					})
 					res.render('works.hbs', {
 						title: 'aburd\'s Works | aburdの業歴',
-						pageTitle: 'works',
+						pageTitle: 'what i do',
 						works: filteredWorks,
 						layout: 'layout'
 					})
