@@ -53,24 +53,33 @@ $section-spacing: 7rem;
 html, body 
 	height: 100%;
 	overflow: auto;
+	font-size: 18px
+
 body
 	font-family: $main-font;
 	font-weight: 200;
-	font-size: 18px
 	color: $font-primary
 	background: linear-gradient($background, rgba($background, 0.2));
 
 @media screen and (max-width: $md)
-	body
-		font-size: 16px	
+	html, body
+		font-size: 23px	
+		h2, h3
+			font-size: $heading-size-2
+		p, ul li, strong, div
+			font-size: $heading-size-3
 
 @media screen and (max-width: $sm)
-	body
-		font-size: 14px	
+	html, body
+		font-size: 20px	
+		p, ul li, strong, div
+			font-size: $heading-size-3
 
 @media screen and (max-width: $xs)
-	body
-		font-size: 12px	
+	html, body
+		font-size: 20px	
+		p, ul li, strong, div
+			font-size: $heading-size-3
 
 @media screen and ($min: $lg)
 	.container
@@ -98,6 +107,7 @@ h2, h3
 	font-weight: 600
 	text-decoration: underline
 
+
 td, th
 	padding: 0 10px 0 0
 
@@ -115,7 +125,6 @@ section
 	z-index: 100
 
 	h1
-		font-size: $heading-size-1
 		margin: 1.3rem 1rem 1rem 1rem
 		letter-spacing: 1rem
 		a
@@ -152,8 +161,9 @@ nav
 					text-decoration: none
 
 #hamburger
-	font-size: $heading-size-1;
-	margin-top: 5px;
+	font-size: 2.4rem;
+	margin: 1rem;
+	padding: 0 1rem
 	float: right;
 	border: 1px solid $background;
 	border-radius: 5px;
@@ -162,7 +172,7 @@ nav
 
 .sidebar-nav
 	position: fixed
-	top: 43px
+	top: 5rem
 	width: 100%
 	left: 0
 	display: none
@@ -190,10 +200,6 @@ nav
 				background: $font-secondary
 				text-decoration: none
 
-
-@media #{$media} and ($max: $md)
-	#main-nav
-		display: none
 
 
 #attention-grabber

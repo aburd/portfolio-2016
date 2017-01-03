@@ -2,32 +2,44 @@
 html, body {
   height: 100%;
   overflow: auto;
+  font-size: 18px;
 }
 
 body {
   font-family: "Open Sans", "Lucida Grande", sans-serif;
   font-weight: 200;
-  font-size: 18px;
   color: #1E7F77;
   background: -webkit-linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
   background: linear-gradient(#e8ffe8, rgba(232, 255, 232, 0.2));
 }
 
 @media screen and (max-width: 992px) {
-  body {
-    font-size: 16px;
+  html, body {
+    font-size: 23px;
+  }
+  html h2, html h3, body h2, body h3 {
+    font-size: 2rem;
+  }
+  html p, html ul li, html strong, html div, body p, body ul li, body strong, body div {
+    font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
+  html, body {
+    font-size: 20px;
+  }
+  html p, html ul li, html strong, html div, body p, body ul li, body strong, body div {
+    font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
+  html, body {
+    font-size: 20px;
+  }
+  html p, html ul li, html strong, html div, body p, body ul li, body strong, body div {
+    font-size: 1.6rem;
   }
 }
 
@@ -86,7 +98,6 @@ section {
 }
 
 #top-bar h1 {
-  font-size: 3rem;
   margin: 1.3rem 1rem 1rem 1rem;
   letter-spacing: 1rem;
 }
@@ -137,8 +148,9 @@ nav #main-nav li a:hover {
 }
 
 #hamburger {
-  font-size: 3rem;
-  margin-top: 5px;
+  font-size: 2.4rem;
+  margin: 1rem;
+  padding: 0 1rem;
   float: right;
   border: 1px solid #e8ffe8;
   border-radius: 5px;
@@ -150,7 +162,7 @@ nav #main-nav li a:hover {
 
 .sidebar-nav {
   position: fixed;
-  top: 43px;
+  top: 5rem;
   width: 100%;
   left: 0;
   display: none;
@@ -182,12 +194,6 @@ nav #main-nav li a:hover {
   color: #eee;
   background: #B2440F;
   text-decoration: none;
-}
-
-@media screen and (max-width: 992px) {
-  #main-nav {
-    display: none;
-  }
 }
 
 #attention-grabber {
@@ -268,7 +274,6 @@ footer ul li {
   top: 0;
   width: 100%;
   background-color: #eee;
-  font-size: 1em;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -293,11 +298,6 @@ footer ul li {
   color: #1E7F77;
 }
 
-.about .image span {
-  color: rgba(30, 127, 119, 0.8);
-  font-size: 0.8em;
-}
-
 .works .info-window {
   margin-left: auto;
   margin-right: auto;
@@ -306,7 +306,6 @@ footer ul li {
   top: 0;
   width: 100%;
   background-color: #eee;
-  font-size: 2.25rem;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -325,16 +324,17 @@ footer ul li {
 }
 
 .works .info-window-inner p {
+  font-size: 2rem;
   font-weight: 400;
   text-decoration: underline;
-  line-height: 25px;
+  line-height: 2rem;
   margin: 0;
   color: #1E7F77;
 }
 
 .works .info-window-inner span {
+  font-size: 1.6rem;
   color: rgba(30, 127, 119, 0.8);
-  font-size: 1.5rem;
 }
 
 .work-item {
@@ -350,7 +350,7 @@ footer ul li {
 }
 
 .work-item .work-item-inner .screenshot img {
-  max-height: 200px;
+  max-height: 20rem;
 }
 
 .screenshots {
@@ -532,6 +532,10 @@ footer ul li {
   background-color: #1E7F77;
   -webkit-animation: ball 3s infinite linear;
           animation: ball 3s infinite linear;
+}
+
+img#space {
+  max-width: 100%;
 }
 
 /* ================ The Timeline ================ */
