@@ -2,7 +2,7 @@
 html, body {
   height: 100%;
   overflow: auto;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -15,13 +15,16 @@ body {
 
 @media screen and (max-width: 992px) {
   html, body {
-    font-size: 23px;
+    font-size: 18px;
   }
   html h2, html h3, body h2, body h3 {
     font-size: 2rem;
   }
   html p, html ul li, html strong, html div, body p, body ul li, body strong, body div {
     font-size: 1.6rem;
+  }
+  html #technicolor h1, body #technicolor h1 {
+    font-size: 5rem;
   }
 }
 
@@ -31,6 +34,9 @@ body {
   }
   html p, html ul li, html strong, html div, body p, body ul li, body strong, body div {
     font-size: 1.6rem;
+  }
+  html h1, body h1 {
+    font-size: 3rem;
   }
 }
 

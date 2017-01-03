@@ -53,7 +53,7 @@ $section-spacing: 7rem;
 html, body 
 	height: 100%;
 	overflow: auto;
-	font-size: 18px
+	font-size: 16px
 
 body
 	font-family: $main-font;
@@ -63,17 +63,21 @@ body
 
 @media screen and (max-width: $md)
 	html, body
-		font-size: 23px	
+		font-size: 18px	
 		h2, h3
 			font-size: $heading-size-2
 		p, ul li, strong, div
 			font-size: $heading-size-3
+		#technicolor h1
+			font-size: 5rem
 
 @media screen and (max-width: $sm)
 	html, body
 		font-size: 20px	
 		p, ul li, strong, div
 			font-size: $heading-size-3
+		h1
+			font-size: $heading-size-1
 
 @media screen and (max-width: $xs)
 	html, body
