@@ -10,7 +10,7 @@ mongoose.Promise = require('bluebird')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
+  res.render('index', {
   	title: 'aburd\'s Portfolio | aburdのポートフォリオ',
   	layout: 'layout'
   });
@@ -35,7 +35,7 @@ router.get('/about', function(req, res, next) {
 					return doc
 				})
 
-				res.render('about', { 
+				res.render('about', {
 			  	title: 'aburd\'s Portfolio | aburdのポートフォリオ',
 			  	timelineEvents: formattedTimelineEvents,
 			  	layout: 'layout',
@@ -58,14 +58,19 @@ router.get('/works', function(req, res, next) {
 		var query = Work.find({}).exec()
 			query
 				.then(function(works) {
-					var filteredWorks = works.map(function(work) {
-						return {
-							name: work.name,
-							url: work.url,
-							agency: work.agency,
-							cover: work.screenshots[0]
-						}
-					})
+					var filteredWorks = works
+            .sort(function(work, nextWork) {
+              return work.date < nextWork.date
+            })
+            .map(function(work) {
+  						return {
+  							name: work.name,
+  							url: work.url,
+  							agency: work.agency,
+  							cover: work.screenshots[0]
+  						}
+  					})
+
 					res.render('works.hbs', {
 						title: 'aburd\'s Works | aburdの業歴',
 						pageTitle: 'what i do',
@@ -141,8 +146,8 @@ router.get('/data/:name', function(req, res, next) {
 			case "name-list":
 				var query = Work.find({}).exec()
 				query
-					.map( function(work) { 
-						return work.name 
+					.map( function(work) {
+						return work.name
 					})
 					.then(function(names) {
 						res.json(names)
